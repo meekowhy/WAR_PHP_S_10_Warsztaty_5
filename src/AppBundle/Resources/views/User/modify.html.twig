@@ -1,0 +1,15 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}modify user{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <div><a href="{{ path('app_user_addaddress', {'id': user.id})}}">dodaj/edytuj adres</a></div>
+    <div><a href="{{ path('app_user_addphone', {'id': user.id})}}">dodaj/edytuj telefon</a></div>
+    <div><a href="{{ path('app_user_addemail', {'id': user.id})}}">dodaj/edytuj email</a></div>
+
+
+{% endblock %}

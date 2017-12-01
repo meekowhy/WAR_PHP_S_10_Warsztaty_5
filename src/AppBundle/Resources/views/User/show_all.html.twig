@@ -1,0 +1,9 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:User:showAll{% endblock %}
+
+{% block body %}
+{% for user in users %}
+{{ include('AppBundle:User:show.html.twig', {'user': user}) }}
+{% endfor %}
+{% endblock %}
